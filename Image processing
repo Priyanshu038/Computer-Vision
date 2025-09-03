@@ -1,0 +1,23 @@
+img1=cv2.imread("E:\\close-up-various-colored-apples.jpg",1) ## imread also takes numbers to check if its color images of grayscale
+cv2.imshow("original",img1)
+cv2.waitKey(3000) ## waits until a key is pressed
+cv2.destroyAllWindows()
+
+
+
+### CHANGING OF THE RGB TO GRAYSCALE
+
+path = input("Enter the path: ").strip()
+path = path.replace("\\", "/")  # normalize path
+
+print("Path entered:", path)
+
+img1 = cv2.imread(path, 0)
+
+if img1 is None:
+    print(" Image not found. Check path carefully!")
+else:
+    img1 = cv2.resize(img1, (1280, 700))
+    cv2.imshow("original", img1)
+    cv2.waitKey(3000)
+    cv2.destroyAllWindows()
